@@ -1,0 +1,21 @@
+<!-- Navbar -->
+<app-navbar></app-navbar>
+<!---->
+
+<div class="container">
+    <h1 class="p-4">Cockteles de hoy</h1>
+    <hr>
+    <div class="row">
+        <div class="col" *ngFor="let item of cocktails">
+            <div class="card" style="width: 18rem;" >
+                <img [src]="item.strDrinkThumb" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> {{item.strDrink}} </h5>
+                  <p class="card-text"> {{item.strInstructions}} </p>
+                  <p class="card-text" style="color: gray;"> {{item.strCategory}}</p>
+                  <a (click)="goCocktail(item.idDrink)" class="btn btn-primary">Go bielas :v</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
